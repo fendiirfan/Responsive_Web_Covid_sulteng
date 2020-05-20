@@ -1,148 +1,151 @@
-
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:wght@700&display=swap');
-    *{
-        margin: opx;
-        padding: 0px;
-    }
- 
-    .wripper{
-        width: 1170px;
-        margin: auto;
-        display: inline;
-    }
-    header{
-        background: url('img/ilustrasi-peta-sebaran-small.jpg');
-        height: 100vh;
-        -webkit-background-size:cover;
-        background-size : cover;
-        background-position: center center;
-        position: relative;
-    }
-
-    .menu{
-        position: fixed;
-        width: 100%;
-        background-color: rgba(3, 3, 105, 0.767);
-        text-align: right;
-        list-style: none;
-        margin-top: 0px;
-    }
-
-    .menu li{
-        display: inline-block;
-    }
-    .menu li a{
-        text-decoration: none;
-        color : white;
-        padding: 6px 21px;
-        font-family: poppins;
-        font-size: 20px;
-    }
-    nav li a:hover{
-        background: white;
-        color : black;
-        border-radius: 10px;
-    }
-    .logo img{
-        width: 250px;
-        float: left;
-        height: auto;
- 
-    }
-    body{
-        margin: 0px;
-    }
-
-    
-   
-/* -------------------------------------------- */
-
-
-
-
-
-    */
-
-
-* {
-    box-sizing: border-box;
- }
- 
-
-footer {
-    padding: 20px;
-    color: white;
-    background-color: rgba(3, 3, 105, 0.767);
-    text-align: center;
-    font-weight: bold;
- }
- 
-body{
-    font-family: 'Quicksand', sans-serif ;
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@1,500&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:wght@700&display=swap');
+*{
     margin: 0;
     padding: 0;
-
- 
 }
-main {
-    padding: 20px;
-    overflow: auto;
-    
- }
-
-
-h2,h3{
-    color: rgb(13, 13, 172);
+header{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/ilustrasi-peta-sebaran-small.jpg');
+    height: 100vh;
+    -webkit-background-size:cover;
+    background-size : cover;
+    background-position: center center;
+    position: relative;
 }
-
-.featured-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;
- }
- .profile img {
-    width: 200px;
- }
-
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 1px 15px 10px 15px;
-    margin-top: 20px;
-    text-align: justify;
-}
-@media screen and (max-width: 1000px) {
-    #content,aside {
-        width: 100%;
-        padding: 0;
-    }
-
- }
- .card ul{
-    padding-left: 40px;
- }
- .card img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: 500px;
- }
- 
-
-
-/* --------------------------------------------------------- */
 .kataHeader{
     position: absolute;
     margin-top: 20%;
-    margin-left: 10px;
+    margin-left: 38%;
+    margin-right: 38%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: cornsilk;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    
+}
+
+/* nav bar */
+nav{
+    
+    background-color: rgb(51, 51, 170);
+    justify-content: space-around;
+    padding: 20px;
+    color: rgb(195, 195, 248);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+nav .log{
+    padding: 0%;
+}
+
+nav ul li a{
+    color: rgb(195, 195, 248);
+    text-decoration: none;
+}
+nav ul li{
+    text-align: center;
+
+}
+
+body{
     font-family: 'Open Sans', sans-serif;
 }
-/* ------------------------------------------------------------ */
+h4{
+    font-family: 'DM Mono', monospace;
+}
+nav ul li a:hover{
+    color: rgb(239, 239, 248);
+}
 
+/* hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 32px;
+    height: 28px;
+    left: -2px;
+    top: 0px;
+    opacity: 0%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(195, 195, 248);
+    border-radius: 4px;
+    transition: all 0.5s;
+    
+}
+
+/* hamburger animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* body web */
+#gambar-pencegahan img{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#transisi{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.473),rgba(0, 0, 0, 0));
+}
+#data{
+    z-index: 0;
+}
+
+/* layanan kesehatan */
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -155,11 +158,12 @@ h2,h3{
     border: 2px solid black;
     border-radius: 10px;
     background-color: #11C5C6;
+    z-index: -9;
 }
 
 .flex-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
 
     /* properti lainnya */
@@ -168,6 +172,8 @@ h2,h3{
     background-color: rgba(3, 3, 105, 0.767);
     border: 2px solid white;
     border-radius: 10px;
+    z-index: -9;
+
 }
 
 .box {
@@ -182,48 +188,163 @@ h2,h3{
     text-align: left;
     color: white;
     width: auto;
-
+    z-index: 0;
 }
-.beda{
-    font-family: 'Libre Baskerville', serif;
-    color: white;
-    margin-right: 560px;
-    font-size: 20px;
-}
-@media screen and (max-width: 1320px) {
-    .beda{
-        margin-right: auto;
-    }
-    .menu{
-        margin: auto;
-        padding: auto;
-        font-size: auto;
-    }
-}
-@media screen and (max-width: 1320px) {
-    .menu{
-        opacity: 100%;
-    }
+#kontakA{
+    z-index: -1;
 }
 h1{
     font-weight: bold;
     font-size: 50px;
     text-align: center;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+#covid{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+    padding: 10px 20px
 }
 
-
-aside {
-    float:right;
-    width: 24%;
-    margin: 1px;
-
- }
-
-
- #covid{
-     float: left;
-     width: 75%;
- }
-div figure{
+#covid ul{
+    margin-left: 40px;
+    padding: 20px;
     overflow: auto;
 }
+h4,h3{
+    margin-top: 10px;
+}
+.card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+ }
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1px 15px 10px 15px;
+    margin-top: 20px;
+    text-align: justify;
+    width: 75%;
+
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(51, 51, 170);
+    padding: 20px;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+/* responsif breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 1100px) {
+    .kataHeader{
+        margin-left: 30%;
+        margin-right: 25%;
+        margin-top: 50%;
+    }
+    nav ul{
+        width: auto;
+        padding-right: 20px;
+    }
+    nav ul li{
+        font-size: 23px;
+    }
+    header{
+        position: fixed;
+    }
+@media screen and (max-width: 800px) {
+    nav ul{
+        width: 60%;
+    }
+    .kataHeader{
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 40%;
+    }
+    .card{
+        width: 90%;
+        margin-right: 20px;
+    }
+    .flex-row{
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    nav ul li a:hover{
+        background-color: rgb(2, 2, 110);
+    }
+
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        background-color: rgb(51, 51, 170);
+        height: 110vh;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        width: 100%;
+        transform: translate(100%);
+        transition: 0.8s;
+    }
+    nav ul li{
+        text-align: left;
+    }
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul.slide{
+        transform: translateX(0%);
+    }
+    header{
+        height: 100vh;
+        background-position: right;
+        background: linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.473)),url('img/—Pngtree—cartoon\ hand\ drawn\ protective\ clothing_5342035.png');
+        background-size: cover;
+        background-position: center;
+        z-index: 999;
+    }
+    .kataHeader{
+        margin-left: 17%;
+        margin-right: 17%;
+        margin-top: 90%;
+        z-index: -1;
+        font-size: 40px;
+    }
+    .card{
+        width: 90%;
+        margin-right: 20px;
+    }
+    .menu-toggle{
+        right: 70px;
+    }
+    logo{
+        left: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
