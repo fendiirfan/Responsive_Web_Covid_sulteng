@@ -281,6 +281,7 @@ footer{
     }
 
 }
+/*  ukuran hp */
 @media screen and (max-width: 576px) {
     nav ul li a:hover{
         background-color: rgb(2, 2, 110);
@@ -309,7 +310,7 @@ footer{
     }
     .menu-toggle{
         display: flex;
-        right: 30%;
+        right: 15%;
     }
 
     nav ul.slide{
@@ -339,9 +340,17 @@ footer{
     .logo{
         left: 30px;
     }
-    
-    
+    footer{
+        width: 90%;
+    }
 }
+
+@media screen and (max-width: 400px) {
+    .menu-toggle{
+        right: 30%;
+    }
+}
+
 .menu-toggle{
     opacity: 100%;
 }
