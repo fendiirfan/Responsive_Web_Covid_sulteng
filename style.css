@@ -34,7 +34,8 @@ nav{
     
     background-color: rgb(51, 51, 170);
     justify-content: space-around;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: rgb(195, 195, 248);
     position: fixed;
     width: 100%;
@@ -125,15 +126,17 @@ nav ul li a:hover{
     padding: 0px;
     margin: 0px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
-#transisi{
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(rgba(0, 0, 0, 0.473),rgba(0, 0, 0, 0));
+main{
+    margin: 20px;
 }
 #data{
     z-index: 0;
+    
+}
+#spasi{
+    margin-top: 50px;
 }
 
 /* layanan kesehatan */
@@ -158,9 +161,9 @@ nav ul li a:hover{
     flex-grow: 1;
 
     /* properti lainnya */
-    padding: 20px;
+    padding: 15px;
     margin: 5px;
-    background-color: rgba(3, 3, 105, 0.767);
+    background-color: rgba(115, 115, 119, 0.863);
     border: 2px solid white;
     border-radius: 10px;
     z-index: -9;
@@ -174,15 +177,18 @@ nav ul li a:hover{
     margin: 5px;
     border: 2px solid white;
     border-radius: 10px;
-    background-color: black;
-    opacity: 80%;
+    background-color: white;
+    opacity: 100%;
     text-align: left;
-    color: white;
+    color: rgb(0, 0, 0);
     width: auto;
     z-index: 0;
 }
 #kontakA{
     z-index: -1;
+}
+#kontak{
+    margin-top: 50px;
 }
 h1{
     font-weight: bold;
@@ -225,10 +231,12 @@ h4,h3{
 }
 
 footer{
+    padding: 0px;
     width: 100%;
     height: auto;
     background-color: rgb(51, 51, 170);
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     justify-content: space-between;
     text-align: center;
     color: white;
@@ -245,28 +253,33 @@ footer{
 @media screen and (max-width: 1100px) {
     .kataHeader{
         margin-left: 30%;
-        margin-right: 25%;
+        margin-left: 25%;
         margin-top: 50%;
     }
     nav ul{
-        justify-content: space-between;
+        padding-right: 20px;
+        width: 65%;
     }
     nav ul li{
-        font-size: 20px;
-        width: ;
+        font-size: 15px;
+        width: 110px;
     }
     nav{
-        justify-content: unset;
+        justify-content: space-between;
+    }
+    .logo{
+        padding-left: 30px;
     }
 }
 @media screen and (max-width: 800px) {
+    nav ul li{
+        font-size: 15px;
+        width: 80px;
+    }
     .flex-row{
         flex-direction: column;
     }
-    nav ul{
-        width: 60%;
-        right: 40%;
-    }
+   
     nav ul li{
         padding: 0px;
     }
@@ -283,6 +296,9 @@ footer{
 }
 /*  ukuran hp */
 @media screen and (max-width: 576px) {
+    h1{
+        font-size: 30px;
+    }
     nav ul li a:hover{
         background-color: rgb(2, 2, 110);
         border: 1px solid white;
@@ -293,6 +309,11 @@ footer{
     nav{
         justify-content: space-between;
     }
+   
+    nav ul li{
+        width: 190px;
+    }
+
     nav ul{
         position: absolute;
         right: 0;
@@ -306,12 +327,13 @@ footer{
         width: 100%;
         transform: translate(100%);
         transition: 0.8s;
-        
+        padding-right: 0px;
     }
     .menu-toggle{
         display: flex;
-        right: 15%;
+        right: 5%;
     }
+    
 
     nav ul.slide{
         transform: translateX(0%);
@@ -323,8 +345,9 @@ footer{
         background-size: cover;
         background-position: center;
         z-index: 999;
-        
+        margin-right: 0px;
     }
+    
     .kataHeader{
         margin-left: 17%;
         margin-right: 17%;
@@ -338,16 +361,14 @@ footer{
     }
     
     .logo{
-        left: 30px;
+        padding-left: 30px;
     }
-    footer{
-        width: 90%;
-    }
+
 }
 
 @media screen and (max-width: 400px) {
     .menu-toggle{
-        right: 30%;
+        right: 5%;
     }
 }
 
